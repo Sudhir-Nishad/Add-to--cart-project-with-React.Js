@@ -1,0 +1,62 @@
+.cards button
+{
+    height: 20px;
+    width: 100px;
+    background-color: green;
+    margin-left: 90px;
+    margin-top: 47px;
+   
+    
+   
+    
+}
+/* .cards
+{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+} */
+.cards .image-box img
+{
+    height: 200px;
+    width: 200px;
+    transition: 0.5s;
+}
+.cards
+{
+    /* border: 2px solid black; */
+    float: left;
+    margin-right: 15px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 5px 2px red;
+    border-radius: 8px;
+    height: 300px;
+    /* position: relative; */
+    margin-left: 3px;
+}
+.cards .image-box
+{
+    height: 200px ;
+    width: 250px;
+    position: relative;
+    /* overflow: hidden; */
+    
+    
+}
+.cards p{
+    margin: 0px 0px 0px 20px;
+    font-weight: bold;
+}
+.cards .image-box img:hover
+{
+    transform: scale(1.8);
+    /* transition: 1s; */
+}
+.cards button:hover
+{
+   background-color: orange;
+}
+.cards:hover
+{
+    box-shadow: 0px 0px 5px 2px black;
+}

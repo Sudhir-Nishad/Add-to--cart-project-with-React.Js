@@ -1,0 +1,125 @@
+<!-- Registration form -->
+
+<html>
+    <head>
+        <title>
+            login form
+        </title>
+        <style>
+            .main
+            {
+                height: 470px;
+                width: 400px;
+                background-color: white;
+                margin: 100px 0px 0px 450px;
+                border-radius: 6px ;
+                padding-top: 20px;
+            }
+            .main:hover
+            {
+                box-shadow: 0px 0px 4px 2px red;
+            }
+            body
+            {
+                background-color: rgb(43, 43, 70)
+            }
+            input
+            {
+                height:40px;
+                width: 300px;
+                margin-left: 50px;
+                background-color: rgb(225, 223, 223);
+                border: none;
+                border-radius: 8px;
+                font-size: 15px;
+                text-align: center;
+
+            }
+            button
+            {
+                height:40px;
+                width: 200px;
+                background-color: rgb(36, 36, 93);
+                color: white;
+                border: none;
+                border-radius: 8px;
+                margin: 30px 0px 0px 100px;
+                font-size: 18px;
+            }
+            #alert
+            {
+                height: 15px;
+                width: 200px;
+                margin-top: 5px;
+                margin-left: 50px;
+                color: red;
+            }
+            input:hover
+            {
+                background-color: rgb(187, 219, 230);
+            }
+            button:hover
+            {
+                cursor: pointer;
+                background-color:rgb(56, 56, 108); ;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <form onsubmit="return validate()">
+        <div class="main">
+            <h2 style="margin: 20px 0px 0px 140px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            </h2><h2 style="margin: 0px 0px 0px 130px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Login Here</h2>
+            <p style="font-size: 17px;font-family:Arial, Helvetica, sans-serif;margin: 30px 0px 0px 50px;color: rgb(60, 57, 57);">Username*</p>
+            <input type="text" >
+            <p style="font-size: 17px;font-family:Arial, Helvetica, sans-serif;margin: 30px 0px 0px 50px;color: rgb(60, 57, 57)">Password*</p>
+            <input type="password" id="sudhir" >
+            <p style="font-size: 17px;font-family:Arial, Helvetica, sans-serif;margin: 30px 0px 0px 50px;color: rgb(60, 57, 57)">Confirm password*</p>
+            <input type="password" id="nammu" onkeyup="check(this)">
+            <div id="alert">
+
+            </div>
+            <button id="submit" type="submit">SUBMIT</button>
+
+        </div>
+        </form>
+        <script type="">
+            
+            var password=document.getElementById('sudhir');
+            var flag=1;
+            function check(element) 
+            {
+                if(element.value.length>0)
+                {
+                    if(element.value!=password.value)
+                    {
+                        document.getElementById('alert').innerText="Password doesn't match";
+                        flag=0;
+                    }
+                    else
+                    {
+                        document.getElementById('alert').innerText="";
+                        flag=1;
+                    }   
+                }
+                else
+                {
+                    document.getElementById('alert').innerText="Please enter confirm password";
+                    flag=0;
+                }
+            }
+            function validate() 
+            {
+             if (flag==1)
+             {
+                return true;
+             }   
+             else
+             {
+                return false;
+             }
+            }
+        </script>
+    </body>
+</html>

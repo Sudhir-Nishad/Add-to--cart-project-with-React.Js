@@ -1,0 +1,17 @@
+*
+{
+  padding: 0px;
+  margin: 0px;
+}
+.warning
+{
+  height: 40px;
+  width: 300px;
+  background-color: red;
+  color: white;
+  position: absolute;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: -500px;
+}
